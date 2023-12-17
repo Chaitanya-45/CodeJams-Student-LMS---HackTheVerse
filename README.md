@@ -24,5 +24,4 @@
 - `py.html`+`pystyle.css`+`pyapp.js`: for the python course
 - `leaderboard.html`+`lstyle.css`+`lapp.js`: handles the leaderboard page
 - `profile.html`+`profstyle.css`+`profapp.js`: handles the profile page 
-- ...
 
