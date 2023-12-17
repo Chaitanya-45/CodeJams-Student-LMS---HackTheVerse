@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Challenge</title>
+  <!-- CodeMirror styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+  <!-- CodeMirror theme -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/theme/dracula.min.css">
+  <!-- CodeMirror language modes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/clike/clike.min.js"></script>
+  <!-- CodeMirror keymap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/keymap/sublime.min.js"></script>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- Your existing styles and other head elements -->
+  <style>
+    body {
+      font-family: 'Press Start 2P', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://i.redd.it/imkv74m4q5g41.png') no-repeat center center fixed;
+      background-size: cover;
+      padding-bottom: 50px;
+    }
+
+    .left-section, .right-section {
+      width: 50%;
+      float: left;
+      padding: 20px;
+      box-sizing: border-box;
+      color: #fff;
+    }
+
+    h2 {
+      color: #9523d1;
+    }
+
+    select {
+      padding: 8px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 300px;
+      box-sizing: border-box;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #666;
+      border-radius: 5px;
+      color: #fff;
+      background-color: #444;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #9523d1;
+      color: #faf6fd;
+      cursor: pointer;
+      font-family: 'Press Start 2P', sans-serif;
+      border-radius: 15px;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #674289;
+    }
+
+    footer {
+      text-align: center;
+      padding: 5px;
+      background-color: rgba(148, 87, 235, 0.8);
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-family: 'Press Start 2P', sans-serif;
+    }
+
+    .head {
+    background-color:transparent;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    font-family: 'Press Start 2P',sans-serif;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.f{
+  font-family: 'Source Code Pro', monospace;
+}
+.back-button {
+    position: absolute;
+    top: 170px;
+    left: 80px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9523d1;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.back-button:hover {
+    background-color: #6a146a;
+}
+
+  </style>
+</head>
+<body>
+
+  <header class="head">
+
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hidemenu()"></i>
+            <ul>
+                <li><a href="home2.html">HOME</a></li>
+                <li><a href="comm.html">COMMUNITY</a></li>
+                <li><a href="puzzle.html">PUZZLES</a></li>
+                <li><a href="courseoff.html">COURSES OFFERED</a></li>
+                
+                <li><a href="leaderboard.html">LEADERBOARD</a></li>
+                <!-- <li><a href="">LOGIN</a></li>
+                <li><a href="">SIGNUP</a></li> -->
+                <!-- <li><a href="">LOGOUT</a></li> -->
+                <li><a href="profile.html">PROFILE</a></li>
+
+
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<button class="back-button" onclick="goToCoursesPage()">Back to Course</button>
+
+<div class="left-section">
+  <h2>Question</h2>
+  <p class="f">Write a program to add two numbers in the chosen programming language.</p>
+</div>
+
+<div class="right-section">
+  <h2>Code Playground</h2>
+  <select id="languageSelect">
+    <option value="c">C</option>
+    <option value="cpp">C++</option>
+    <option value="python">Python</option>
+    <!-- Add more language options as needed -->
+  </select>
+
+  <div id="codeFor">
+    <label> enter your code</label>
+    <br><br>
+    <textarea type ="text"  id="codeEdito" rows="6" placeholder="Enter your code here..."> </textarea>
+  </div>
+  <br><br>
+    <button type="button" onclick="submitCode()">Submit Code</button>
+    <br><br><br><br><br>
+</div>
+
+<footer>
+  <p>&copy; 2023 Your Code Challenge. All rights reserved.</p>
+</footer>
+
+<!-- CodeMirror library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+<script>
+  // Initialize CodeMirror editor
+  const codeEditor = CodeMirror.fromTextArea(document.getElementById('codeEditor'), {
+    lineNumbers: true,
+    mode: 'text/x-csrc', // Default to C language
+    theme: 'dracula', // Adjust the theme as needed
+    keyMap: 'sublime' // Optional, adjust as needed
+  });
+
+  function submitCode() {
+    window.location.href = 'leaderboard.html';
+    // Add your actual code submission logic here
+  }
+  function goToCoursesPage() {
+    window.location.href = 'ccourse.html'; // Replace with the actual URL of your courses page
+}
+</script>
+
+</body>
+</html>

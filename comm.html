@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Page</title>
+  <link rel="stylesheet" href="commstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="head">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="home2.html">HOME</a></li>
+                    <li><a href="comm.html">COMMUNITY</a></li>
+                    <li><a href="puzzle.html">PUZZLES</a></li>
+                    <li><a href="courseoff.html">COURSES OFFERED</a></li>
+                    
+                    <li><a href="leaderboard.html">LEADERBOARD</a></li>
+                    <!-- <li><a href="">LOGIN</a></li>
+                    <li><a href="">SIGNUP</a></li> -->
+                    <!-- <li><a href="">LOGOUT</a></li> -->
+                    <li><a href="">PROFILE</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <h2 class="comm">Community Page</h2>
+<div class="container">
+
+  <form id="postForm">
+    <textarea id="postContent" placeholder="Write your post..."></textarea>
+    <button type="button" onclick="addPost()">Post</button>
+  </form>
+</div>
+
+<section class="courses-container">
+  <div class="course-box" id="post1">
+    <h2 class="h2">Post 1</h2>
+    <p>Contents of post 1</p>
+  </div>
+  
+  <div class="course-box" id="post2">
+    <h2 class="h2">Post 2</h2>
+    <p>Contents of post 2</p>
+  </div>
+  
+  <div class="course-box" id="post3">
+    <h2 class="h2">Post 3</h2>
+    <p>Contents of post 3</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2023 Your Community. All rights reserved.</p>
+</footer>
+
+<script>
+  const postsArray = [];
+
+  function addPost() {
+    const postContent = document.getElementById('postContent').value.trim();
+    if (postContent !== '') {
+      postsArray.push(postContent);
+
+      // Display all posts
+      displayPosts();
+
+      // Clear the textarea after posting
+      document.getElementById('postContent').value = '';
+    }
+  }
+
+  function displayPosts() {
+    const postsContainer = document.getElementById('posts');
+    postsContainer.innerHTML = '';
+
+    postsArray.forEach((post, index) => {
+      const postElement = document.createElement('div');
+      postElement.classList.add('post');
+      postElement.innerHTML = <i class="fas fa-comment"></i>${post};
+
+      postsContainer.appendChild(postElement);
+    });
+  }
+
+  // Initial display of posts
+  displayPosts();
+</script>
+
+</body>
+</html>

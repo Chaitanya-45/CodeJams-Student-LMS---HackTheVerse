@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Puzzle</title>
+  <link rel="stylesheet" href="puzzstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="head">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="home2.html">HOME</a></li>
+                    <li><a href="comm.html">COMMUNITY</a></li>
+                    <li><a href="puzzle.html">PUZZLES</a></li>
+                    <li><a href="courseoff.html">COURSES OFFERED</a></li>
+                    
+                    <li><a href="leaderboard.html">LEADERBOARD</a></li>
+                    <!-- <li><a href="">LOGIN</a></li>
+                    <li><a href="">SIGNUP</a></li> -->
+                    <!-- <li><a href="">LOGOUT</a></li> -->
+                    <li><a href="profile.html">PROFILE</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <h2 class="comm"> Daily Puzzle</h2>
+
+<div class="container">
+
+  <div id="puzzleContainer">
+    <h3 id="puzzleQuestion">Loading...</h3>
+    <div id="optionsContainer"></div>
+    <button onclick="checkAnswer()">Submit Answer</button>
+    <p id="result"></p>
+  </div>
+
+  <div id="pointsContainer">
+    <p class="p">Points: <span id="points">0</span></p>
+  </div>
+</div>
+
+<script src="puzzle.js"></script>
+
+</body>
+</html>

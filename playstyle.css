@@ -1,0 +1,52 @@
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://i.redd.it/imkv74m4q5g41.png') no-repeat center center fixed;
+    background-size: cover;
+    padding-bottom: 50px; /* Adjust as needed */
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .left-section, .right-section {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+  }
+  
+  .upper-half, .lower-half {
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .upper-half:hover, .lower-half:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    background-color: #9523d1;
+    color: #faf6fd;
+    cursor: pointer;
+    border: 1px solid #9523d1;
+    border-radius: 15px;
+  }
+  
+  button:hover {
+    background-color: #faf6fd;
+    color: #9523d1;
+  }

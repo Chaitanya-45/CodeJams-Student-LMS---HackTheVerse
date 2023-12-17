@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="profstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="auth.js"></script>
+</head>
+<body>
+
+<header class="head">
+  <nav>
+    <div class="nav-links" id="navLinks">
+      <i class="fa fa-times" onclick="hidemenu()"></i>
+      <ul>
+        <li><a href="home2.html">HOME</a></li>
+        <li><a href="comm.html">COMMUNITY</a></li>
+        <li><a href="puzzle.html">PUZZLES</a></li>
+        <li><a href="courseoff.html">COURSES OFFERED</a></li>
+        
+        <li><a href="leaderboard.html">LEADERBOARD</a></li>
+        <li><a href="profile.html" id="profileLink">PROFILE</a></li>
+        <li><button class="back-button" onclick="goToCoursesPage()">Logout</button></li>
+      </ul>
+    </div>
+  </nav>
+
+</header>
+
+<div class="profile-container">
+  <div class="profile-pic">
+    <img src="https://forrestperkins.com/wp-content/uploads/2017/11/avatar.jpg" alt="Profile Picture">
+  </div>
+
+  <div class="profile-username">
+    <h2 id="usernameDisplay">Username: AdaCode</h2>
+  </div>
+
+  <div class="profile-info">
+    <div class="profile-box" id="points">
+      <h3>Points</h3>
+      <p class="pro">100</p>
+    </div>
+
+    <div class="profile-box" id="badges">
+      <h3>Badges</h3>
+      <ul>
+        <li class="pro">Inquisitive</li>
+        <li class="pro">Solver</li>
+        <!-- Add more badges as needed -->
+      </ul>
+    </div>
+
+    <div class="profile-box" id="rank">
+      <h3>Leaderboard Rank</h3>
+      <p class="pro">Top 10%</p>
+    </div>
+  </div>
+
+  <div class="graph-container">
+    <!-- Add graph display here -->
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2023 Your Profile. All rights reserved.</p>
+</footer>
+
+<script>
+    function goToCoursesPage() {
+    window.location.href = 'index.html'; // Replace with the actual URL of your courses page
+}
+    // Update the username dynamically
+    const usernameDisplay = document.getElementById('usernameDisplay');
+
+    if (getCurrentUser()) {
+        usernameDisplay.innerText = getCurrentUser().username;
+    }
+</script>
+
+</body>
+</html>

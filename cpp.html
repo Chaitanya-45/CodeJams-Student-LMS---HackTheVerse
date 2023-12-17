@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPP Programming</title>
+    <link rel="stylesheet" href="cppstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="head">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="home2.html">HOME</a></li>
+                    <!-- <li><a href="about.html">ABOUT</a></li> -->
+                    
+                    <li><a href="comm.html">COMMUNITY</a></li>
+                    <li><a href="puzzle.html">PUZZLES</a></li>
+                    <li><a href="courseoff.html">COURSES OFFERED</a></li>
+                    
+                    <li><a href="leaderboard.html">LEADERBOARD</a></li>
+                    <!-- <li><a href="">LOGIN</a></li>
+                    <li><a href="">SIGNUP</a></li> -->
+                    <!-- <li><a href="">LOGOUT</a></li> -->
+                    <li><a href="profile.html">PROFILE</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <h1 class="c">Learn C++</h1>
+<section class="learning-path">
+    <div class="path-step" id="step1">
+        <h2>Step 1: Introduction to CPP Programming</h2>
+        <p>Learn the basics of CPP programming language, its history, and its significance.</p>
+        <br><br>
+        <button class="next-step" onclick="goToStep(2)">Next Step</button>
+    </div>
+    
+    <div class="path-step" id="step2">
+        <h2>Step 2: Setting Up Your Development Environment</h2>
+        <p>Configure and set up the tools needed for CPP programming, including IDEs and compilers.</p>
+        <br><br>
+        <button class="prev-step" onclick="goToStep(1)">Previous Step</button>
+        <button class="next-step" onclick="goToStep(3)">Next Step</button>
+    </div>
+
+    <div class="path-step" id="step3">
+        <h2>Step 3: I/O</h2>
+        <p>Learn input and output functions in CPP programming.</p>
+        <br><br>
+        <button class="prev-step" onclick="goToStep(2)">Previous Step</button>
+        <button class="next-step" onclick="goToStep(4)">Next Step</button>
+    </div>
+    
+    <div class="path-step" id="step4">
+        <h2>Step 4: Variables and Data Types</h2>
+        <p>Understand how to declare variables and work with different data types in CPP.</p>
+        <br><br>
+        <button class="prev-step" onclick="goToStep(3)">Previous Step</button>
+        <!-- Add more steps as needed -->
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 Your LMS. All rights reserved.</p>
+</footer>
+
+<script src="cppapp.js"></script>
+</body>
+</html>

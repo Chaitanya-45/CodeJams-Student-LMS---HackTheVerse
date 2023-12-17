@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Your LMS</title>
+    <link rel="stylesheet" href="lstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="head">
+
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="home2.html">HOME</a></li>
+                    <li><a href="comm.html">COMMUNITY</a></li>
+                    <li><a href="puzzle.html">PUZZLES</a></li>
+                    <li><a href="courseoff.html">COURSES OFFERED</a></li>
+                    
+                    <li><a href="leaderboard.html">LEADERBOARD</a></li>
+                    <!-- <li><a href="">LOGIN</a></li>
+                    <li><a href="">SIGNUP</a></li> -->
+                    <!-- <li><a href="">LOGOUT</a></li> -->
+                    <li><a href="profile.html">PROFILE</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <button class="back-button" onclick="goToCoursesPage()">Back to Profile</button>
+
+    <h1 class="c">Leaderboard</h1>
+
+<section class="leaderboard">
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>User</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody id="leaderboardBody">
+            <!-- Leaderboard data will be dynamically added here -->
+        </tbody>
+    </table>
+</section>
+<br><br>
+<section class="quotes-section">
+    <div class="quote-box">
+        <p id="quoteText">Learning to code opens up new possibilities!</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 Your LMS. All rights reserved.</p>
+</footer>
+
+<script src="lapp.js">
+const quotes = [
+        "Learning to code opens up new possibilities!",
+        "Code is the next universal language.",
+        "Coding is not just for engineers; it's for everyone.",
+        "The best way to predict the future is to create it.",
+        // Add more quotes as needed
+    ];
+
+    // Function to display a random quote
+    function displayRandomQuote() {
+        const quoteText = document.getElementById("quoteText");
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        quoteText.textContent = quotes[randomIndex];
+    }
+
+    // Call the function initially
+    displayRandomQuote();
+</script>
+</body>
+</html>

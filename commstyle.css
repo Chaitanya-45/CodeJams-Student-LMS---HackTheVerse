@@ -1,0 +1,164 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 0;
+    background: url('https://opengameart.org/sites/default/files/bg_02_h.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .h2 {
+    font-family: 'Press Start 2P', sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+  }
+  
+  #postForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  #postForm textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #9523d1;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  #postForm button {
+    padding: 10px 15px;
+    background-color: #9523d1;
+    color: #faf6fd;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  #posts {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
+  .post {
+    border: 1px solid #9523d1;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    text-align: center;
+    width: 50px;
+  }
+  
+  .post i {
+    margin-right: 5px;
+    text-align: center;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(148, 87, 235, 0.8);
+    color: #fff;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    font-family: 'Press Start 2P', sans-serif;
+  }
+  
+  .courses-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .course-box {
+    width: 70%;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #9523d1;
+    border-radius: 10px;
+    background-color: #fff;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+.comm{
+    text-align: center;
+    color: #fff;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+  .course-box:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  .course-box h2 {
+    color: #9523d1;
+  }
+  
+
+  header {
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width:100%;
+}

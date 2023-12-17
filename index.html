@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student LMS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+</head>
+<script src="auth.js"></script>
+<body>
+    <section class="header">
+        <div class="logo">
+            <img src="logo2.png" alt="Codeoholics Logo">
+        </div>
+        <nav>
+            <a href="index.html"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <!-- <li><a href="about.html">ABOUT</a></li> -->
+                    <!-- <li><a href="">LOGIN</a></li>
+                    <li><a href="">SIGNUP</a></li> -->
+                    <li><a href="signup.php">REGISTER</a></li>
+                     <li><a href="login.php">LOGIN</a></li>
+                    <!-- <li><a href="">PROFILE</a></li> -->
+                    <!-- <div class="user-actions">
+                        <a href="login.php">Login</a>
+                        <a href="signup.php">Sign Up</a>
+                    </div> -->
+
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Learn to code.</h1>
+            <p>Choose between a range of beginner-friendly learning paths. <br>Code anytime, anywhere.</p>
+            <a href="signup.php" class="hero-btn">Register to start your learning
+            </a>
+        </div>
+    </section>
+
+    <section class="course">
+        <h1>Languages</h1>
+        <p>One of the best platforms to kickstart your coding skills.</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>C</h3>
+                <p>Welcome to the world of C programming, where simplicity meets power! C is a versatile and foundational programming language that has stood the test of time. Developed in the early 1970s, C has been the language of choice for building operating systems, embedded systems, game development, and more.</p>
+            </div>
+            <div class="course-col">
+                <h3>C++</h3>
+                <p>In this course, you'll dive into the world of C++ and explore its syntax, object-oriented principles, and advanced features. Whether you're a novice eager to grasp the fundamentals or an experienced developer aiming to enhance your skills, C++ opens the door to limitless possibilities in the realm of programming.</p>
+            </div>
+            <div class="course-col">
+                <h3>Python</h3>
+                <p>In this course, you'll delve into the fundamentals of Python, mastering its syntax and exploring its vast ecosystem of libraries and frameworks. From building web applications to creating intelligent algorithms, Python empowers you to turn your ideas into reality.</p>
+            </div>
+        </div>
+    </section>
+
+   
+
+    
+
+    <section class="testimonials">
+        <h1>What our students say</h1>
+        <br>
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="user1.jpg">
+                <div>
+                    <p>very good experience learnt lot of new things,would recommend this platorm to learn new skills if you are a beginner</p>
+                    <h3>Christine Berkley</h3>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="user2.jpg">
+                <div>
+                    <p>best platform to kickstart your coding skills,the gaming style this platform is the main attention seeker</p>
+                    <h3>David Byer</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h1>Enroll in our various online courses<br>from anywhere in the world</h1>
+        <a href="" class="hero-btn">Contact us</a>
+    </section>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <div class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+        <!-- <p>Made with <i class="fa fa-heart-o"></i>  </p> -->
+    </section>
+
+    <!-- <button id="toggleModeBtn" onclick="toggleMode()">Toggle Mode</button> -->
+
+    <script>
+        var navlinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navlinks.style.right = "0";
+        }
+
+        function hidemenu() {
+            navlinks.style.right = "-200px";
+        }
+
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentUser = getCurrentUser();
+
+      if (currentUser) {
+        if (currentUser.role === 'admin') {
+          // Modify the page for admin
+          document.getElementById('reviews').contentEditable = true;
+        } else {
+          // Modify the page for regular users
+          document.getElementById('reviews').contentEditable = false;
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

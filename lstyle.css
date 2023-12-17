@@ -1,0 +1,171 @@
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/011/737/167/non_2x/pixel-art-background-with-rocket-flying-in-sky-with-clouds-background-for-8-bit-game-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 50px; /* Adjust as needed */
+}
+
+.back-button {
+    position: absolute;
+    top: 170px;
+    left: 80px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9523d1;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.back-button:hover {
+    background-color: #6a146a;
+}
+
+.head {
+    background-color:transparent;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.c{
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    background-color: transparent; /* Transparent background */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+section.leaderboard {
+    margin: 100px;
+    text-align: center;
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure rounded corners are visible */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+}
+
+section.leaderboard:hover {
+    transform: scale(1.05); /* Increase size on hover */
+    opacity: 0.9; /* Reduce opacity on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent; /* Transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure rounded corners are visible */
+}
+
+thead {
+    background-color: transparent; /* Transparent background */
+    color: #fff;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+tr:hover {
+    background-color: #f39c12;
+    transition: background-color 0.3s ease;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Press Start 2P', sans-serif;;
+}
+
+/* Add this CSS to your existing styles */
+.quotes-section {
+    background-color: #f44336;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.quote-box {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#quoteText {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.5;
+}
